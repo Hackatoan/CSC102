@@ -9,8 +9,11 @@ Finally calls update function
 */
 function rps(userChoice) {
   const choices = ["rock", "paper", "scissors"];
+  //generates a random number between 0 and 2 to select a random choice
   const botChoice = choices[Math.floor(Math.random() * choices.length)];
   let status;
+
+  //all possible game combos
   if (userChoice === botChoice) {
     draws++;
     console.log("It's a draw!");
@@ -35,6 +38,7 @@ function rps(userChoice) {
 //handles the records and updates the visual elements accordingly
 function updateRecord(status, userChoice, botChoice) {
   if (userChoice) {
+    //create a node and add it to the list on the html to keep a record
     let node = document.createElement("li");
     let textnode = document.createTextNode(
       "Player: " +
@@ -47,6 +51,8 @@ function updateRecord(status, userChoice, botChoice) {
     node.appendChild(textnode);
     document.getElementById("rpsresults").appendChild(node);
   }
+
+  //visual updates
   document.getElementById("playerpick").innerHTML =
     "Player Picked: " + userChoice;
   document.getElementById("aipick").innerHTML = "AI Picked: " + botChoice;
