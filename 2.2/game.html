@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Big Casino</title>
+  </head>
+  <body>
+    <section>
+      <h1>Try your luck at Rock Paper Scissors.</h1>
+      <button id="playrpsbutton" onclick="playrps()">Play Now</button
+      ><br /><br />
+    </section>
+    <section id="rpsgame" style="visibility: hidden">
+      <h2>Pick your move.</h2>
+      <button onclick="rps(`rock`)">Rock!</button>
+      <button onclick="rps(`paper`)">Paper!</button>
+      <button onclick="rps(`scissors`)">Scissors!</button>
+      <h2 id="playerpick">You picked:</h2>
+      <h2 id="aipick">AI picked:</h2>
+    </section>
+    <section id="rpsrecord" style="visibility: hidden">
+      <h2>Past Record</h2>
+      <div id="wins">Wins:</div>
+      <div id="loss">Losses:</div>
+      <div id="draws">Draws:</div>
+    </section>
+    <section id="gameresults">
+      <ul style="display: inline" id="rpsresults"></ul>
+    </section>
+  </body>
+  <script src="script.js"></script>
+</html>
