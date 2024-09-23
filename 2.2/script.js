@@ -66,8 +66,10 @@ function playrps() {
   if (document.getElementById("rpsgame").style.visibility == `hidden`) {
     document.getElementById("rpsgame").style.visibility = `visible`;
     document.getElementById("rpsrecord").style.visibility = `visible`;
+    document.getElementById("gameresults").style.visibility = `visible`;
     document.getElementById("playrpsbutton").innerHTML = "Hide";
   } else {
+    document.getElementById("gameresults").style.visibility = `hidden`;
     document.getElementById("rpsgame").style.visibility = `hidden`;
     document.getElementById("rpsrecord").style.visibility = `hidden`;
     document.getElementById("playrpsbutton").innerHTML = "Play Now!";
