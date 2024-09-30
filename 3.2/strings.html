@@ -1,0 +1,64 @@
+<!-- Jacob Harris, 9-29-2024 -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Palindrome Checker</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div>
+      <h1>Palindrome Checker</h1>
+      <button onclick="palindromeButton()">Check for Palindromes</button>
+      <br />
+      <ul style="display: inline" id="pastWords"></ul>
+    </div>
+    <br />
+    <div>
+      <form id="nameform">
+        <label for="fname">First name:</label>
+        <input
+          type="text"
+          id="fname"
+          name="fname"
+          minlength="1"
+          required
+        /><br />
+        <label for="lname">Last name:</label>
+        <input
+          type="text"
+          id="lname"
+          name="lname"
+          minlength="1"
+          required
+        /><br />
+        <label for="zip">Zip Code:</label>
+        <input
+          type="text"
+          id="zip"
+          name="zip"
+          pattern="\d{5,5}(-\d{4,4})?"
+          required
+        />
+        <br />
+        <input type="submit" value="Submit" />
+        <p id="errorMessage" style="color: red"></p>
+        <img
+          id="crown"
+          src="crown.png"
+          alt="corwn"
+          width="20%"
+          style="visibility: hidden"
+        />
+        <p
+          id="secretMessage"
+          style="color: black; visibility: hidden; font-weight: bold"
+        >
+          The Secret Message
+        </p>
+      </form>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
