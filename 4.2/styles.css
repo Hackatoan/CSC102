@@ -1,0 +1,58 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: brown;
+}
+
+#container {
+  background-color: black;
+  height: 500px;
+  width: 500px;
+  display: flex;
+  justify-content: center;
+
+  overflow: hidden;
+  position: relative;
+  margin: 10px;
+  margin-inline: auto;
+}
+#movableImage {
+  max-height: 100px;
+  max-width: 100px;
+  position: absolute;
+}
+
+button {
+  width: 80px;
+  height: 40px;
+  margin: 5px;
+}
+#topButton {
+  grid-area: topButton;
+}
+
+#leftButton {
+  grid-area: leftButton;
+}
+
+#rightButton {
+  grid-area: rightButton;
+}
+
+#bottomButton {
+  grid-area: bottomButton;
+}
+#grid-container {
+  display: grid;
+  grid-template-areas:
+    "topButton topButton topButton"
+    "leftButton container rightButton"
+    "bottomButton bottomButton bottomButton";
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: auto 1fr auto;
+  justify-items: center;
+  align-items: center;
+  gap: 10px;
+}
