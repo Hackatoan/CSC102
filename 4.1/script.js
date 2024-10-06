@@ -72,7 +72,7 @@ let ts = (image.offsetHeight.top = Math.floor(
   Math.random() * (container.clientHeight - image.clientHeight)
 ));
 image.style.left = `${ls}px`;
-image.style.right = `${ts}px`;
+image.style.top = `${ts}px`;
 
 //event listeners
 startbtn.addEventListener("click", function () {
