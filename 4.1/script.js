@@ -1,4 +1,4 @@
-//Jacob Harris - 6 - 10 - 2024
+//Jacob Harris - 10 - 6 - 2024
 
 //defining the elements in the html
 let startbtn = document.getElementById("startbtn");
