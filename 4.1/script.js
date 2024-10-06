@@ -13,21 +13,6 @@ let interval;
 let right = false;
 let down = false;
 
-//disables start button and enables stop button
-//calls the movment function
-function start() {
-  disablebtn.disabled = false;
-  startbtn.disabled = true;
-  move();
-}
-//opositive of start() runs stopmove function
-function disable() {
-  stopmove();
-
-  disablebtn.disabled = true;
-  startbtn.disabled = false;
-}
-
 //handles movement
 function move() {
   //interval is used to run something on a loop without blocking other inputs from working
@@ -88,3 +73,15 @@ let ts = (image.offsetHeight.top = Math.floor(
 ));
 image.style.left = `${ls}px`;
 image.style.right = `${ts}px`;
+
+//event listeners
+startbtn.addEventListener("click", function () {
+  disablebtn.disabled = false;
+  startbtn.disabled = true;
+  move();
+});
+disablebtn.addEventListener("click", function () {
+  stopmove();
+  disablebtn.disabled = true;
+  startbtn.disabled = false;
+});
