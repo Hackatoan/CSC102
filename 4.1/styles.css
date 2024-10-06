@@ -1,0 +1,30 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: brown;
+}
+
+#container {
+  background-color: black;
+  height: 500px;
+  width: 500px;
+  display: flex;
+  justify-content: center;
+
+  overflow: hidden;
+  position: relative;
+  margin: 10px;
+  margin-inline: auto;
+}
+#movableImage {
+  max-height: 100px;
+  max-width: 100px;
+  position: absolute;
+}
+
+button {
+  width: 10%;
+  margin: 5px;
+}
